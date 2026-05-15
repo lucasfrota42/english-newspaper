@@ -3,53 +3,107 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Parnaíba News - Digital Newspaper</title>
+  <title>Parnaíba News</title>
+
   <style>
-    body {
+    * {
       margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
       font-family: Arial, sans-serif;
-      background: #f2f2f2;
+      background: #f4f4f4;
       color: #222;
     }
 
     header {
       background: #111;
       color: white;
-      text-align: center;
-      padding: 30px;
+      padding: 20px 40px;
       border-bottom: 5px solid #d40000;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
 
-    header h1 {
-      margin: 0;
-      font-size: 3rem;
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 2rem;
+      font-weight: bold;
       letter-spacing: 2px;
     }
 
-    header p {
-      color: #ccc;
+    nav {
       margin-top: 10px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-right: 20px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #ff4d4d;
+    }
+
+    .hero {
+      background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1400&auto=format&fit=crop');
+      background-size: cover;
+      background-position: center;
+      height: 350px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      padding: 20px;
+    }
+
+    .hero-content {
+      background: rgba(0,0,0,0.6);
+      padding: 30px;
+      border-radius: 12px;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
     }
 
     .container {
       max-width: 1200px;
       margin: auto;
-      padding: 20px;
+      padding: 40px 20px;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 25px;
     }
 
     .card {
       background: white;
-      border-radius: 12px;
+      border-radius: 15px;
       overflow: hidden;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
       transition: 0.3s;
     }
 
     .card:hover {
-      transform: translateY(-5px);
+      transform: translateY(-8px);
     }
 
     .card img {
@@ -63,98 +117,149 @@
     }
 
     .content h2 {
-      margin-top: 0;
       color: #d40000;
+      margin-bottom: 15px;
+    }
+
+    .content p {
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+
+    .read-more {
+      display: inline-block;
+      text-decoration: none;
+      background: #d40000;
+      color: white;
+      padding: 10px 16px;
+      border-radius: 8px;
+      transition: 0.3s;
+    }
+
+    .read-more:hover {
+      background: #a30000;
     }
 
     footer {
       background: #111;
       color: white;
       text-align: center;
-      padding: 20px;
+      padding: 30px;
       margin-top: 30px;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      nav {
+        margin-top: 15px;
+      }
     }
   </style>
 </head>
 <body>
 
 <header>
-  <h1>PARNAÍBA NEWS</h1>
-  <p>English Digital Newspaper • Created by Lucas</p>
+  <div class="top-bar">
+    <div class="logo">PARNAÍBA NEWS</div>
+
+    <nav>
+      <a href="#local">Local</a>
+      <a href="#cocal">Cocal</a>
+      <a href="#funny">Funny News</a>
+      <a href="#tech">Technology</a>
+      <a href="#sports">Sports</a>
+      <a href="#music">Music</a>
+    </nav>
+  </div>
 </header>
+
+<section class="hero">
+  <div class="hero-content">
+    <h1>Welcome to Parnaíba News</h1>
+    <p>Your English digital newspaper about local news, culture, sports and technology.</p>
+  </div>
+</section>
 
 <div class="container">
 
-  <div class="card">
-    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1200&auto=format&fit=crop" alt="Beach">
+  <div class="card" id="local">
+    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1200&auto=format&fit=crop" alt="Parnaiba Beach">
     <div class="content">
       <h2>Local News - Parnaíba</h2>
       <p>
         Tourists are visiting Parnaíba during the holiday season.
         Pedra do Sal beach and Delta do Parnaíba continue to attract many visitors every week.
       </p>
+      <a class="read-more" href="#">Read More</a>
     </div>
   </div>
 
-  <div class="card">
-    <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5ce?q=80&w=1200&auto=format&fit=crop" alt="City">
+  <div class="card" id="cocal">
+    <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5ce?q=80&w=1200&auto=format&fit=crop" alt="Cocal">
     <div class="content">
       <h2>News From Cocal</h2>
       <p>
-        Residents in Cocal are preparing for local cultural events and community activities.
-        Students are also participating in school projects and English presentations.
+        Residents in Cocal are preparing for cultural events and school activities.
+        English presentations are becoming more popular among students.
       </p>
+      <a class="read-more" href="#">Read More</a>
     </div>
   </div>
 
-  <div class="card">
+  <div class="card" id="funny">
     <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop" alt="Teacher">
     <div class="content">
       <h2>Funny News</h2>
       <p>
-        An English teacher was stung by a scorpion this week, but fortunately she is feeling well now.
-        Students said she returned to class like a superhero.
+        An English teacher was stung by a scorpion this week, but fortunately she is feeling better now.
+        Students say she returned to class like a superhero.
       </p>
+      <a class="read-more" href="#">Read More</a>
     </div>
   </div>
 
-  <div class="card">
+  <div class="card" id="tech">
     <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop" alt="Technology">
     <div class="content">
       <h2>Technology</h2>
       <p>
-        Artificial Intelligence is becoming more common in schools and workplaces.
-        Many students are using technology to improve their English skills.
+        Artificial Intelligence is helping students improve their education.
+        Many schools are now using digital tools in the classroom.
       </p>
+      <a class="read-more" href="#">Read More</a>
     </div>
   </div>
 
-  <div class="card">
+  <div class="card" id="sports">
     <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=1200&auto=format&fit=crop" alt="Sports">
     <div class="content">
       <h2>Sports</h2>
       <p>
-        Martial arts are becoming popular among teenagers.
-        Many young people are practicing judo and improving their discipline and health.
+        Martial arts are becoming very popular among teenagers.
+        Many students are practicing judo and improving their discipline.
       </p>
+      <a class="read-more" href="#">Read More</a>
     </div>
   </div>
 
-  <div class="card">
+  <div class="card" id="music">
     <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?q=80&w=1200&auto=format&fit=crop" alt="Music">
     <div class="content">
       <h2>Music</h2>
       <p>
-        Rock music from the 1990s and 2000s is still very popular.
-        Songs like “All Star” and “Imagine” continue to inspire people around the world.
+        Songs like “All Star” and “Imagine” continue to inspire millions of people around the world.
       </p>
+      <a class="read-more" href="#">Read More</a>
     </div>
   </div>
 
 </div>
 
 <footer>
-  <p>Created for English Class • 2026</p>
+  <p>Created by Lucas • English Class Project • 2026</p>
 </footer>
 
 </body>
