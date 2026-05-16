@@ -3,73 +3,163 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Scorpion Teacher</title>
+  <title>English Teacher Survives Scorpion Sting</title>
 
   <style>
-    body{
-      font-family: Arial, sans-serif;
-      background:#111;
-      color:white;
+
+    *{
       margin:0;
       padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family:Arial, sans-serif;
+      background:#f4f4f4;
+      color:#222;
+      line-height:1.7;
+    }
+
+    header{
+      background:#111;
+      color:white;
+      padding:20px;
+      border-bottom:5px solid #d40000;
+      text-align:center;
+    }
+
+    header h1{
+      font-size:2rem;
     }
 
     .news-container{
       max-width:900px;
-      margin:auto;
+      margin:40px auto;
+      background:white;
       padding:30px;
+      border-radius:16px;
+      box-shadow:0 4px 12px rgba(0,0,0,0.1);
     }
 
-    img{
+    .news-image{
       width:100%;
       border-radius:12px;
-      margin-bottom:20px;
+      margin-bottom:25px;
+      object-fit:cover;
+      max-height:500px;
+      background:#eee;
     }
 
-    h1{
-      font-size:40px;
+    h2{
+      color:#d40000;
       margin-bottom:20px;
+      font-size:2rem;
+    }
+
+    .news-meta{
+      color:#777;
+      margin-bottom:20px;
+      font-size:0.95rem;
     }
 
     p{
-      line-height:1.8;
-      font-size:18px;
-      color:#ddd;
+      margin-bottom:18px;
+      font-size:1.05rem;
     }
 
-    a{
-      color:#ffd54f;
+    .back-button{
+      display:inline-block;
+      margin-top:30px;
       text-decoration:none;
+      background:#d40000;
+      color:white;
+      padding:12px 18px;
+      border-radius:8px;
+      transition:0.3s;
     }
+
+    .back-button:hover{
+      background:#a30000;
+    }
+
+    footer{
+      text-align:center;
+      background:#111;
+      color:white;
+      padding:25px;
+      margin-top:40px;
+    }
+
+    @media (max-width:768px){
+
+      .news-container{
+        margin:20px;
+        padding:20px;
+      }
+
+      h2{
+        font-size:1.6rem;
+      }
+
+      p{
+        font-size:1rem;
+      }
+
+    }
+
   </style>
 </head>
 
 <body>
 
-  <div class="news-container">
+<header>
+  <h1>English Class News</h1>
+</header>
 
-    <a href="index.html">← Back to Home</a>
+<div class="news-container">
 
-    <img src="scorpion.png" alt="Scorpion Teacher">
+  <img
+    class="news-image"
+    src="scorpion.png"
+    alt="Scorpion Teacher"
+  >
 
-    <h1>English Teacher Survives Scorpion Sting</h1>
+  <h2>English Teacher Survives Scorpion Sting</h2>
 
-    <p>
-      A teacher from Teresina became well known among students after surviving a scorpion sting.
-      The incident happened earlier this month and quickly became a funny topic at school.
-    </p>
-
-    <p>
-      After recovering, students started jokingly calling her the “Scorpion Teacher”.
-      Some even compared her to the Mortal Kombat character Scorpion.
-    </p>
-
-    <p>
-      Fortunately, the teacher recovered very well and returned to work normally.
-      Students said she handled the situation calmly and with good humor.
-    </p>
-
+  <div class="news-meta">
+    April 2026 • Cocal, Piauí
   </div>
+
+  <p>
+    An English teacher from Cocal became well known among students after being
+    stung by a scorpion. Fortunately, she received medical attention quickly
+    and recovered without serious complications.
+  </p>
+
+  <p>
+    After the incident, students started making jokes and calling her
+    “Scorpion Teacher”. The story became popular at school and on social media.
+  </p>
+
+  <p>
+    To make the situation more fun, a cartoon version of the teacher inspired by
+    the character Scorpion from Mortal Kombat was created for the school newspaper.
+  </p>
+
+  <p>
+    Despite the scare, the teacher returned to class normally and continued
+    teaching English to her students.
+  </p>
+
+  <a class="back-button" href="index.html">
+    ← Back to Home
+  </a>
+
+</div>
+
+<footer>
+  <p>Created by Lucas • English Class Project • 2026</p>
+</footer>
 
 </body>
 </html>
