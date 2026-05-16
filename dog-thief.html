@@ -3,73 +3,173 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Dog Thief</title>
+  <title>Thief Forgets Dog After Robbery</title>
 
   <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
     body{
-      font-family:Arial;
+      font-family:Arial, sans-serif;
+      background:#f4f4f4;
+      color:#222;
+      line-height:1.7;
+    }
+
+    header{
       background:#111;
       color:white;
-      margin:0;
+      padding:20px;
+      border-bottom:5px solid #d40000;
+      text-align:center;
     }
 
-    .container{
+    header h1{
+      font-size:2rem;
+    }
+
+    .news-container{
       max-width:900px;
-      margin:auto;
+      margin:40px auto;
+      background:white;
       padding:30px;
+      border-radius:16px;
+      box-shadow:0 4px 12px rgba(0,0,0,0.1);
     }
 
-    img, video{
+    .news-image{
       width:100%;
       border-radius:12px;
-      margin:20px 0;
+      margin-bottom:25px;
+      object-fit:cover;
+      max-height:500px;
+    }
+
+    h2{
+      color:#d40000;
+      margin-bottom:20px;
+      font-size:2rem;
+    }
+
+    .news-meta{
+      color:#777;
+      margin-bottom:20px;
+      font-size:0.95rem;
     }
 
     p{
-      line-height:1.8;
-      color:#ddd;
+      margin-bottom:18px;
+      font-size:1.05rem;
     }
 
-    a{
-      color:#ffd54f;
-      text-decoration:none;
+    .news-video{
+      width:100%;
+      border-radius:12px;
+      margin-top:30px;
+      background:black;
     }
+
+    .back-button{
+      display:inline-block;
+      margin-top:30px;
+      text-decoration:none;
+      background:#d40000;
+      color:white;
+      padding:12px 18px;
+      border-radius:8px;
+      transition:0.3s;
+    }
+
+    .back-button:hover{
+      background:#a30000;
+    }
+
+    footer{
+      text-align:center;
+      background:#111;
+      color:white;
+      padding:25px;
+      margin-top:40px;
+    }
+
+    @media (max-width:768px){
+
+      .news-container{
+        margin:20px;
+        padding:20px;
+      }
+
+      h2{
+        font-size:1.6rem;
+      }
+
+      p{
+        font-size:1rem;
+      }
+
+    }
+
   </style>
 </head>
 
 <body>
 
-<div class="container">
+<header>
+  <h1>English Class News</h1>
+</header>
 
-<a href="index.html">← Back</a>
+<div class="news-container">
 
-<h1>Thief Forgets Dog After Robbery</h1>
+  <img
+    class="news-image"
+    src="https://s2-g1.glbimg.com/9uKqzKOR_Xd96KM0_Ii-BXiInas=/0x0:1600x900/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2026/o/S/BsBEViQZa24oBUtDazoQ/montagem-furtocom-cachorro.jpg.jpeg"
+    alt="Dog Thief"
+  >
 
-<img src="https://s2-g1.glbimg.com/9uKqzKOR_Xd96KM0_Ii-BXiInas=/0x0:1600x900/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2026/o/S/BsBEViQZa24oBUtDazoQ/montagem-furtocom-cachorro.jpg.jpeg">
+  <h2>Thief Forgets Dog After Robbery</h2>
 
-<p>
-A man invaded a house in Cocal and stole a gas cylinder and a bicycle.
-However, he accidentally forgot his dog inside the victim’s house.
-</p>
+  <div class="news-meta">
+    February 9, 2026 • Cocal, Piauí
+  </div>
 
-<p>
-According to local police, the dog helped lead the victim to the suspect’s house.
-The suspect was arrested later the same day.
-</p>
+  <p>
+    A man invaded a house in Cocal and stole a gas cylinder and a bicycle.
+    However, he accidentally forgot his dog inside the house after the robbery.
+  </p>
 
-<p>
-The unusual story became very popular online because of the loyal dog involved in the case.
-</p>
+  <p>
+    The victim discovered the crime after waking up and seeing an unknown dog
+    inside the residence. Neighbors later informed him that a suspicious man
+    had been seen carrying a gas cylinder nearby.
+  </p>
 
-<h2>Video</h2>
+  <p>
+    According to police, the dog helped the victim locate the suspect’s house.
+    When confronted, the suspect attacked the victim before being arrested hours later.
+  </p>
 
-<video controls>
-  <source src="dog-thief.mp4" type="video/mp4">
-  Your browser does not support video.
-</video>
+  <p>
+    The unusual story became popular in the region because of the dog’s unexpected
+    role in helping identify the criminal.
+  </p>
+
+  <video class="news-video" controls>
+    <source src="dog-thief.mp4" type="video/mp4">
+  </video>
+
+  <a class="back-button" href="index.html">
+    ← Back to Home
+  </a>
 
 </div>
+
+<footer>
+  <p>Created by Lucas • English Class Project • 2026</p>
+</footer>
 
 </body>
 </html>
